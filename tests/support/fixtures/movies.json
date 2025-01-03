@@ -1,0 +1,82 @@
+{
+    "dawn_of_the_dead": {
+      "title": "Dawn of the Dead",
+      "overview": "A group of survivors takes refuge in a shopping mall during a zombie apocalypse.",
+      "featured": false,
+      "cover": "images/covers/dawn_of_the_dead.jpg",
+      "company": "Universal Pictures",
+      "release_year": 2004
+    },
+    "28_days_later": {
+      "title": "28 Days Later",
+      "overview": "A man wakes up from a coma to find a world ravaged by a mysterious virus that turns people into zombies.",
+      "featured": false,
+      "cover": "images/covers/28_days_later.jpg",
+      "company": "DNA Films",
+      "release_year": 2002
+    },
+    "create": {
+      "title": "World War Z",
+      "overview": "A former UN employee races against time to stop a global zombie pandemic.",
+      "featured": true,
+      "cover": "images/covers/world_war_z.jpg",
+      "company": "Paramount Pictures",
+      "release_year": 2013
+    },
+    "train_to_busan": {
+      "title": "Train to Busan",
+      "overview": "Passengers on a train struggle to survive as a zombie outbreak spreads in South Korea.",
+      "featured": false,
+      "cover": "images/covers/train_to_busan.jpg",
+      "company": "Next Entertainment World",
+      "release_year": 2016
+    },
+    "shaun_of_the_dead": {
+      "title": "Shaun of the Dead",
+      "overview": "A man and his friend try to rescue loved ones and survive a zombie apocalypse with humor and chaos.",
+      "featured": false,
+      "cover": "images/covers/shaun_of_the_dead.jpg",
+      "company": "Universal Pictures",
+      "release_year": 2004
+    },
+    "resident_evil": {
+      "title": "Resident Evil",
+      "overview": "Based on the popular video game, a special forces team fights zombies in an underground laboratory.",
+      "featured": false,
+      "cover": "images/covers/resident_evil.jpg",
+      "company": "Constantin Film",
+      "release_year": 2002
+    },
+    "the_walking_dead_movie": {
+      "title": "The Walking Dead: Movie",
+      "overview": "A film adaptation of the popular series following Rick Grimes and his battle with the undead.",
+      "featured": false,
+      "cover": "images/covers/walking_dead_movie.jpg",
+      "company": "amc_studios",
+      "release_year": 2024
+    },
+    "i_am_legend": {
+      "title": "I Am Legend",
+      "overview": "A scientist in a post-apocalyptic New York fights to find a cure for a virus that turned humans into dark-seekers.",
+      "featured": false,
+      "cover": "images/covers/i_am_legend.jpg",
+      "company": "Warner Bros", 
+      "release_year": 2007
+    },
+    "zombieland": {
+      "title": "Zombieland",
+      "overview": "A quirky group of survivors navigate a zombie-infested world with humor and unorthodox strategies.",
+      "featured": false,
+      "cover": "images/covers/zombieland.jpg",
+      "company": "Columbia Pictures",
+      "release_year": 2009
+    },
+    "army_of_the_dead": {
+      "title": "Army of the Dead",
+      "overview": "A group of mercenaries ventures into a quarantined Las Vegas to recover a massive fortune.",
+      "featured": false,
+      "cover": "images/covers/army_of_the_dead.jpg",
+      "company": "Netflix",
+      "release_year": 2021
+    }
+  }
