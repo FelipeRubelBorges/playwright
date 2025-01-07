@@ -1,4 +1,4 @@
-## 🤘 Sobre
+## 🤘 About
 
 Repository for the automated testing project of the Zombie Plus system, built during the Playwright Zombie Edition course! Playwright is an open-source tool developed by Microsoft that revolutionizes web system test automation, offering an effective and highly reliable approach.
 
