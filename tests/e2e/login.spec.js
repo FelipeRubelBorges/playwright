@@ -7,7 +7,7 @@ test.beforeEach(async ({ page }) => {
 test.describe("Login", () => {
     test("deve logar como administrador", async ({ page }) => {
         await page.login.submit("admin@zombieplus.com", "pwd123");
-        await page.movies.isLoggedIn();
+        await page.login.isLoggedIn();
     });
 
     test("não deve logar com email incorreto", async ({ page }) => {

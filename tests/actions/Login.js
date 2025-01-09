@@ -1,8 +1,14 @@
 const { expect } = require("@playwright/test");
 
-export class LoginPage {
+export class Login {
   constructor(page) {
     this.page = page;
+  }
+
+  async do(email, password) {
+    await this.visit();
+    await this.submit(email, password);
+    await this.isLoggedIn();
   }
 
   async visit() {
@@ -17,6 +23,11 @@ export class LoginPage {
     await this.page.getByText("Entrar").click();
   }
 
+  async isLoggedIn() {
+    await this.page.waitForLoadState("networkidle");
+    await expect(this.page).toHaveURL(/.*movies/);
+  }
+
   async toastHaveText(message) {
     const toast = this.page.locator(".toast");
     await expect(toast).toHaveText(message);
@@ -27,4 +38,5 @@ export class LoginPage {
     const alert = this.page.locator("span[class$=alert]");
     await expect(alert).toHaveText(target);
   }
+
 }

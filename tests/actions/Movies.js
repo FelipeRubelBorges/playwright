@@ -1,13 +1,8 @@
 import { expect } from "@playwright/test";
 
-export class MoviesPage {
+export class Movies {
     constructor(page) {
         this.page = page;
-    }
-
-    async isLoggedIn() {
-        await this.page.waitForLoadState("networkidle");
-        await expect(this.page).toHaveURL(/.*movies/);
     }
 
     async goForm() {
