@@ -36,4 +36,6 @@ test.describe("Login", () => {
         await page.login.submit("", "");
         await page.login.alertHaveText(["Campo obrigatório", "Campo obrigatório"]);
     });
+
+
 });

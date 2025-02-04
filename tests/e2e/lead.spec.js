@@ -54,5 +54,6 @@ test.describe("Lead Form", () => {
     await page.leads.submitLeadForm("", "");
     await page.leads.alertHaveText(["Campo obrigatório", "Campo obrigatório"]);
   });
+
 });
 

@@ -24,8 +24,8 @@ export class Login {
   }
 
   async isLoggedIn() {
-    await this.page.waitForLoadState("networkidle");
-    await expect(this.page).toHaveURL(/.*movies/);
+    const loggedIn = this.page.locator(".logged-user");
+    await expect(loggedIn).toHaveText("Olá, Admin");
   }
 
   async toastHaveText(message) {
