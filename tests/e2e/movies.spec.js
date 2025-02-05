@@ -1,15 +1,22 @@
 const { test } = require("../support");
 
 test.beforeEach(async ({ page }) => {
-    await page.login.do("admin@zombieplus.com", "pwd123");
+    await page.login.do("admin@zombieplus.com", "pwd123", "Admin");
 });
 
 test.describe("Movies", () => {
 
-    test('deve cadastrar um novo filme', async ({ page }) => {
-        const movie = page.data.create;
+    test('deve cadastrar um novo filme como featured', async ({ page }) => {
+        const movie = page.data.world_war_z;
         await page.executeSql(`DELETE FROM movies WHERE title = '${movie.title}';`);
-        await page.movies.create(movie.title, movie.overview, movie.company, movie.release_year);
+        await page.movies.create(movie);
+        await page.toast.containsText("Cadastro realizado com sucesso!");
+    });
+
+    test('deve cadastrar um novo filme como não featured', async ({ page }) => {
+        const movie = page.data.dawn_of_the_dead;
+        await page.executeSql(`DELETE FROM movies WHERE title = '${movie.title}';`);
+        await page.movies.create(movie);
         await page.toast.containsText("Cadastro realizado com sucesso!");
     });
 
