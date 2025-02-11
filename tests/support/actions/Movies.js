@@ -1,4 +1,4 @@
-import { expect } from "@playwright/test";  
+import { expect } from "@playwright/test";
 
 export class Movies {
     constructor(page) {
@@ -18,19 +18,19 @@ export class Movies {
         await this.page.locator("#title").fill(movie.title);
         await this.page.locator("#overview").fill(movie.overview);
         await this.page.waitForSelector('#select_company_id .react-select__indicator', { state: 'visible' });
-        await this.page.locator('#select_company_id .react-select__indicator').click(); 
-        await this.page.locator(".react-select__option").filter({ hasText: movie.company }).click();   
+        await this.page.locator('#select_company_id .react-select__indicator').click();
+        await this.page.locator(".react-select__option").filter({ hasText: movie.company }).click();
         await this.page.locator("#select_year .react-select__indicator").click();
         await this.page.locator(".react-select__option").filter({ hasText: movie.release_year }).click();
-        await this.page.getByLabel("poster").setInputFiles("tests/support/fixtures" + movie.cover);        
+        await this.page.getByLabel("poster").setInputFiles("tests/support/fixtures" + movie.cover);
         if (movie.featured === true) {
             await this.page.locator(".featured .react-switch").click();
-        }   
+        }
         await this.submit();
     }
 
     async alertHaveText(target) {
         const alert = this.page.locator("span[class$=alert]");
         await expect(alert).toHaveText(target);
-      }
+    }
 }
