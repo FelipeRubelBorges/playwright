@@ -3,12 +3,10 @@ const { Pool } = require("pg");
 const dbConfig = {
     host: "localhost",
     port: 5432,
-    user: "postgres", 
+    user: "postgres",
     password: "pwd123",
     database: "zombieplus"
 };
-
-const pool = new Pool(dbConfig);
 
 export async function executeSql(sqlScript) {
     try {

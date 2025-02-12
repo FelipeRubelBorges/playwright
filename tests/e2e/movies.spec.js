@@ -1,4 +1,5 @@
-const { test } = require("../support");
+const { test, expect } = require("../support");
+
 
 test.beforeEach(async ({ page }) => {
     await page.login.do("admin@zombieplus.com", "pwd123", "Admin");
@@ -14,19 +15,9 @@ test.describe("Movies", () => {
         await page.toast.containsText("Cadastro realizado com sucesso!");
     });
 
-    test('não deve cadastrar quando o filme já existe', async ({ page }) => {
+    test('não deve cadastrar quando o filme já existe', async ({ request, page }) => {
         const movie = page.data.resident_evil;
-        const response = await request.post("http://localhost:3333/movies", {
-            data: {
-                title: movie.title,
-                overview: movie.overview,
-                company: movie.company,
-                release_year: movie.release_year,
-                cover: movie.cover,
-                featured: false,
-            },
-        });
-        expect(response.ok());
+        await request.api.postMovie(movie);
         await page.movies.create(movie);
         await page.toast.containsText("Oops!Este conteúdo já encontra-se cadastrado no catálogo")
     });

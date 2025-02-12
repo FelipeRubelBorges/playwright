@@ -6,9 +6,9 @@ export class Toast {
   }
 
   async containsText(message) {
-    const toast = this.page.locator(".toast").first();
-    await expect(toast).toContainText(message);
-    await expect(toast).toBeHidden({ timeout: 6000 });
+    const toast = this.page.locator(".toast");
+    await expect(toast).toContainText(message, { timeout: 10000 });
+    await expect(toast).toBeHidden({ timeout: 10000 });
   }
 
 }

@@ -7,6 +7,7 @@ const { executeSql } = require("./database");
 const { Leads } = require("./actions/Leads");
 const { faker } = require("@faker-js/faker");
 const data = require("./fixtures/movies");
+const { Api } = require("./api");
 
 
 const test = base.extend({
@@ -21,6 +22,12 @@ const test = base.extend({
             faker: faker,
             data: data,
         });
+    },
+    request: async ({ request }, use) => {
+        const context = request
+
+        context['api'] = new Api(request)
+        await use(context)
     }
 });
 
