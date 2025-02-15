@@ -27,6 +27,7 @@ const test = base.extend({
         const context = request
 
         context['api'] = new Api(request)
+        await context['api'].setToken()
         await use(context)
     }
 });

@@ -1,5 +1,4 @@
-const { test, expect } = require("../support");
-
+const { test} = require("../support");
 
 test.beforeEach(async ({ page }) => {
     await page.login.do("admin@zombieplus.com", "pwd123", "Admin");
@@ -17,8 +16,8 @@ test.describe("Movies", () => {
 
     test('não deve cadastrar quando o filme já existe', async ({ request, page }) => {
         const movie = page.data.resident_evil;
-        await request.api.postMovie(movie);
-        await page.movies.create(movie);
+        await request.api.postMovie(movie)
+        await page.movies.create(movie)
         await page.toast.containsText("Oops!Este conteúdo já encontra-se cadastrado no catálogo")
     });
 

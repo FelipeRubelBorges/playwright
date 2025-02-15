@@ -24,7 +24,8 @@ export class Api {
     }
 
     async postMovie(movie) {
-        await this.setToken()
+
+        const companyId = await this.getCompanyByName(movie.company)
         const response = await this.request.post('http://localhost:3333/movies', {
             headers: {
                 Authorization: this.token,
@@ -35,13 +36,28 @@ export class Api {
             multipart: {
                 title: movie.title,
                 overview: movie.overview,
-                company_id: 'a9de2dbc-7107-4d59-9d35-c3737976e7a4',
+                company_id: companyId,
                 release_year: movie.release_year,
                 cover: movie.cover,
                 featured: movie.featured,
             }
         })
         expect(response.ok()).toBeTruthy()
+        return JSON.parse(await response.text())
+    }
+
+    async getCompanyByName(companyName) {
+        const response = await this.request.get('http://localhost:3333/companies', {
+            headers: {
+                Authorization: this.token,
+            },
+            params: {
+                name: companyName
+            }
+        })
+        expect(response.ok()).toBeTruthy()
+        const body = JSON.parse(await response.text())
+        return body.data[0].id
     }
 
 }
