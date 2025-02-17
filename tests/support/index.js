@@ -2,8 +2,7 @@ const { test: base, expect } = require("@playwright/test");
 
 const { Login } = require("./actions/Login");
 const { Movies } = require("./actions/Movies");
-const { Toast } = require("./actions/Components");
-const { executeSql } = require("./database");
+const { Popup } = require("./actions/Components");
 const { Leads } = require("./actions/Leads");
 const { faker } = require("@faker-js/faker");
 const data = require("./fixtures/movies");
@@ -17,8 +16,7 @@ const test = base.extend({
             leads: new Leads(page),
             login: new Login(page),
             movies: new Movies(page),
-            toast: new Toast(page),
-            executeSql: executeSql,
+            popup: new Popup(page),
             faker: faker,
             data: data,
         });

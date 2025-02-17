@@ -1,6 +1,5 @@
 const { test, expect } = require("../support");
 
-
 let leadName;
 let leadEmail;
 
@@ -16,8 +15,8 @@ test.describe("Lead Form", () => {
 
     await page.leads.submitLeadForm(leadName, leadEmail);
     const message =
-      "Agradecemos por compartilhar seus dados conosco. Em breve, nossa equipe entrará em contato!";
-    await page.toast.containsText(message);
+      "Agradecemos por compartilhar seus dados conosco. Em breve, nossa equipe entrará em contato.";
+    await page.popup.haveText(message);
   });
 
   test("não deve cadastrar quando o email já está cadastrado", async ({ request, page }) => {
@@ -32,8 +31,8 @@ test.describe("Lead Form", () => {
     expect(response.ok());
 
     await page.leads.submitLeadForm(leadName, leadEmail);
-    const message = "O endereço de e-mail fornecido já está registrado em nossa fila de espera.";
-    await page.toast.containsText(message);
+    const message = "Verificamos que o endereço de e-mail fornecido já consta em nossa lista de espera. Isso significa que você está um passo mais perto de aproveitar nossos serviços.";
+    await page.popup.haveText(message);
   });
 
   test("não deve cadastrar com email incorreto", async ({ page }) => {

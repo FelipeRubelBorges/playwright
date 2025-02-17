@@ -30,8 +30,19 @@ export class Movies {
         await this.submit();
     }
 
-    async alertHaveText(target) {
-        const alert = this.page.locator("span[class$=alert]");
+    /*async alertHaveText(target) {
+        const alert = this.page.locator(".alert");
         await expect(alert).toHaveText(target);
+    }*/ 
+
+    async alertHaveText(target) {
+        const alerts = this.page.locator(".alert");
+        const count = await alerts.count();
+    
+        for (let i = 0; i < count; i++) {
+            await expect(alerts.nth(i)).toHaveText(target);
+        }
     }
+
+  
 }
