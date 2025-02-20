@@ -17,6 +17,13 @@ test.describe("Movies", () => {
         await page.popup.haveText(`O filme '${movie.title}' foi adicionado ao catálogo.`);
     });
 
+    test('deve remover um filme do catálogo', async ({ page, request }) => {
+        const movie = page.data.i_am_legend;
+        await request.api.postMovie(movie);
+        await page.movies.remove(movie);
+        await page.popup.haveText('Filme removido com sucesso.');
+    });
+
     test('não deve cadastrar quando o filme já existe', async ({ request, page }) => {
         const movie = page.data.resident_evil;
         await request.api.postMovie(movie)

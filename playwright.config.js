@@ -7,12 +7,12 @@ import process from "process";
  * @see https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
-  timeout: 30_000,
+  //timeout: 30_000,
   testDir: './tests',
-  fullyParallel: true,
+  fullyParallel: false,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  workers: 1,
+  workers: 17,
   reporter: [["list"], ["html"]],
   use: {
     trace: "on",

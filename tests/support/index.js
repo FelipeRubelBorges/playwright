@@ -1,5 +1,4 @@
 const { test: base, expect } = require("@playwright/test");
-
 const { Login } = require("./actions/Login");
 const { Movies } = require("./actions/Movies");
 const { Popup } = require("./actions/Components");
