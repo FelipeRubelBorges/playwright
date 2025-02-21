@@ -1,4 +1,4 @@
-const { test} = require("../support");
+const { test } = require("../support");
 const { executeSql } = require("../support/database");
 
 test.beforeEach(async ({ page }) => {
@@ -42,5 +42,13 @@ test.describe("Movies", () => {
         await page.movies.goForm();
         await page.movies.submit();
         await page.movies.alertHaveText("Campo obrigatório");
+    });
+
+    test('deve realizar busca pelo termo "zombie"', async ({ page, request }) => {
+        const movies = page.data.search;
+        movies.data.forEach(async (movie) => {
+            await request.api.postMovie(movie);
+        });
+        await page.movies.search(movies.input, movies.outputs);
     });
 });

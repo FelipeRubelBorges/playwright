@@ -9,9 +9,9 @@ import process from "process";
 export default defineConfig({
   //timeout: 30_000,
   testDir: './tests',
-  fullyParallel: false,
+  fullyParallel: true,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
+  retries: 2,
   workers: 17,
   reporter: [["list"], ["html"]],
   use: {

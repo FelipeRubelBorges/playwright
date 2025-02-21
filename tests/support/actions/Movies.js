@@ -45,5 +45,12 @@ export class Movies {
         await this.page.click('.confirm-removal');
     }
 
+    async search(term, outputs) {
+        await this.page.getByPlaceholder("Busque pelo nome").fill(term);
+        await this.page.click(".actions button");
+        const rows = this.page.getByRole('row');
+        await expect(rows).toContainText(outputs);
+    }
+
 
 }

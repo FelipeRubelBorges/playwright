@@ -1,82 +1,59 @@
 {
-    "dawn_of_the_dead": {
-      "title": "Dawn of the Dead",
-      "overview": "A group of survivors takes refuge in a shopping mall during a zombie apocalypse.",
-      "featured": false,
-      "cover": "/covers/movies/madrugada.jpg",
-      "company": "Universal Pictures",
-      "release_year": 2004
-    },
-    "28_days_later": {
-      "title": "28 Days Later",
-      "overview": "A man wakes up from a coma to find a world ravaged by a mysterious virus that turns people into zombies.",
-      "featured": false,
-      "cover": "/covers/movies/28_days_later.jpg",
-      "company": "DNA Films",
-      "release_year": 2002
-    },
-    "world_war_z": {
-      "title": "World War Z",
-      "overview": "A former UN employee races against time to stop a global zombie pandemic.",
-      "featured": true,
-      "cover": "/covers/movies/wwz.png", 
-      "company": "Paramount Pictures",
-      "release_year": 2013
-    },
-    "train_to_busan": {
-      "title": "Train to Busan",
-      "overview": "Passengers on a train struggle to survive as a zombie outbreak spreads in South Korea.",
-      "featured": false,
-      "cover": "/covers/movies/train_to_busan.jpg",
-      "company": "Next Entertainment World",
-      "release_year": 2016
-    },
-    "shaun_of_the_dead": {
-      "title": "Shaun of the Dead",
-      "overview": "A man and his friend try to rescue loved ones and survive a zombie apocalypse with humor and chaos.",
-      "featured": false,
-      "cover": "/covers/movies/shaun_of_the_dead.jpg",
-      "company": "Universal Pictures",
-      "release_year": 2004
-    },
-    "resident_evil": {
-      "title": "Resident Evil",
-      "overview": "Based on the popular video game, a special forces team fights zombies in an underground laboratory.",
-      "featured": false,
-      "cover": "/covers/movies/resident-evil.jpg",
-      "company": "Sony Pictures",
-      "release_year": 2002
-    },
-    "the_walking_dead_movie": {
-      "title": "The Walking Dead: Movie",
-      "overview": "A film adaptation of the popular series following Rick Grimes and his battle with the undead.",
-      "featured": false,
-      "cover": "/covers/movies/walking_dead_movie.jpg",
-      "company": "amc_studios",
-      "release_year": 2024
-    },
-    "i_am_legend": {
-      "title": "I Am Legend",
-      "overview": "A scientist in a post-apocalyptic New York fights to find a cure for a virus that turned humans into dark-seekers.",
-      "featured": false,
-      "cover": "/covers/movies/warm-bodies.jpg",
-      "company": "Warner Bros", 
-      "release_year": 2007
-    },
-    "zombieland": {
-      "title": "Zombieland",
-      "overview": "A quirky group of survivors navigate a zombie-infested world with humor and unorthodox strategies.",
-      "featured": false,
-      "cover": "/covers/movies/zombieland.jpg",
-      "company": "Columbia Pictures",
-      "release_year": 2009
-    },
-    "army_of_the_dead": {
-      "title": "Army of the Dead",
-      "overview": "A group of mercenaries ventures into a quarantined Las Vegas to recover a massive fortune.",
-      "featured": false,
-      "cover": "/covers/movies/army_of_the_dead.jpg",
-      "company": "Netflix",
-      "release_year": 2021
-    }
+  "dawn_of_the_dead": {
+    "title": "Dawn of the Dead",
+    "overview": "A group of survivors takes refuge in a shopping mall during a zombie apocalypse.",
+    "featured": false,
+    "cover": "/covers/movies/madrugada.jpg",
+    "company": "Universal Pictures",
+    "release_year": 2004
+  },
+  "world_war_z": {
+    "title": "World War Z",
+    "overview": "A former UN employee races against time to stop a global zombie pandemic.",
+    "featured": true,
+    "cover": "/covers/movies/wwz.png",
+    "company": "Paramount Pictures",
+    "release_year": 2013
+  },
+  "resident_evil": {
+    "title": "Resident Evil",
+    "overview": "Based on the popular video game, a special forces team fights zombies in an underground laboratory.",
+    "featured": false,
+    "cover": "/covers/movies/resident-evil.jpg",
+    "company": "Sony Pictures",
+    "release_year": 2002
+  },
+  "i_am_legend": {
+    "title": "I Am Legend",
+    "overview": "A scientist in a post-apocalyptic New York fights to find a cure for a virus that turned humans into dark-seekers.",
+    "featured": false,
+    "cover": "/covers/movies/warm-bodies.jpg",
+    "company": "Warner Bros",
+    "release_year": 2007
+  },
+  "search": {
+    "input": "zombie",
+    "outputs": [
+      "Zombieland",
+      "My Boyfriend is a Zombie"
+    ],
+    "data": [
+      {
+        "title": "Zombieland",
+        "overview": "A quirky group of survivors navigate a zombie-infested world with humor and unorthodox strategies.",
+        "featured": false,
+        "cover": "/covers/movies/zumbilandia.jpg",
+        "company": "Columbia Pictures",
+        "release_year": 2009
+      },
+      {
+        "title": "My Boyfriend is a Zombie",
+        "overview": "A young woman falls in love with a charming zombie, challenging the boundaries between life and death.",
+        "featured": false,
+        "cover": "/covers/movies/warm-bodies.jpg",
+        "company": "Warner Bros",
+        "release_year": 2025
+      }
+    ]
   }
+}
