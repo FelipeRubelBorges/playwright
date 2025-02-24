@@ -1,7 +1,11 @@
 const { test, expect } = require("../support");
-
+const { executeSql } = require("../support/database");
 let leadName;
 let leadEmail;
+
+test.beforeAll(async () => {
+  await executeSql('Delete from leads');
+});
 
 test.beforeEach(async ({ page }) => {
   await page.leads.visit();
