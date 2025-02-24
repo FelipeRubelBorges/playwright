@@ -27,6 +27,7 @@ test.describe("Movies", () => {
     test('não deve cadastrar quando o filme já existe', async ({ request, page }) => {
         const movie = page.data.resident_evil;
         await request.api.postMovie(movie)
+        await page.popup.refresh();
         await page.movies.create(movie)
         await page.popup.haveText(`O título '${movie.title}' já consta em nosso catálogo. Por favor, verifique se há necessidade de atualizações ou correções para este item.`)
     });

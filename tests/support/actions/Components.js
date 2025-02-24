@@ -11,4 +11,8 @@ export class Popup {
     await this.page.keyboard.press('Escape');
   }
 
+  async refresh() {
+    await this.page.reload();
+}
+
 }

@@ -12,7 +12,7 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: 2,
-  workers: 3,
+  workers: 5,
   reporter: [["list"], ["html"]],
   use: {
     trace: "on",

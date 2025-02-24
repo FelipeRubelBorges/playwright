@@ -19,7 +19,7 @@ export class Movies {
         await this.page.locator("#title").fill(movie.title);
         await this.page.locator("#overview").fill(movie.overview);
         await this.page.waitForSelector('#select_company_id .react-select__indicator', { state: 'visible' });
-        await this.page.locator('#select_company_id .react-select__indicator').click();
+        await this.page.locator('#select_company_id .react-select__indicator').first().click();
         await this.page.locator(".react-select__option").filter({ hasText: movie.company }).click();
         await this.page.locator("#select_year .react-select__indicator").click();
         await this.page.locator(".react-select__option").filter({ hasText: movie.release_year }).click();
@@ -52,6 +52,8 @@ export class Movies {
         const rows = this.page.getByRole('row');
         await expect(rows).toContainText(outputs);
     }
+
+
 
 
 
