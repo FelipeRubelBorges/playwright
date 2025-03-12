@@ -6,13 +6,12 @@ export class Popup {
   }
 
   async haveText(message) {
-    const element = this.page.locator(".swal2-html-container")
+    const element = this.page.locator(".swal2-html-container");
     await expect(element).toHaveText(message);
-    await this.page.keyboard.press('Escape');
+    await this.page.keyboard.press("Escape");
   }
 
   async refresh() {
     await this.page.reload();
-}
-
+  }
 }

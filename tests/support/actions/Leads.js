@@ -1,6 +1,5 @@
 const { expect } = require("@playwright/test");
 
-
 export class Leads {
   constructor(page) {
     this.page = page;

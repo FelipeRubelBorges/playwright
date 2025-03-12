@@ -38,5 +38,4 @@ export class Login {
     const alert = this.page.locator("span[class$=alert]");
     await expect(alert).toHaveText(target);
   }
-
 }
