@@ -1,6 +1,9 @@
 // @ts-check
 import { defineConfig, devices } from "@playwright/test";
 import process from "process";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 
 /**
@@ -15,9 +18,10 @@ export default defineConfig({
   workers: 3,
   reporter: [["list"], ["html"]],
   use: {
-    trace: "on",
-    screenshot: "on",
-    video: "on",
+  //  trace: "on",
+    screenshot: "only-on-failure",
+  //  video: "on",
+  baseURL: "http://localhost:3000"
   },
   projects: [
     {

@@ -29,7 +29,7 @@ test.describe("Lead Form", () => {
   }) => {
     leadName = page.faker.person.fullName();
     leadEmail = page.faker.internet.email();
-    const response = await request.post("http://localhost:3333/leads", {
+    const response = await request.post(`${process.env.BASE_API}/leads`, {
       data: {
         name: leadName,
         email: leadEmail,
